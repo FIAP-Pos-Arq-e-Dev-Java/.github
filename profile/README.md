@@ -54,9 +54,4 @@ A qualidade do software é garantida por testes em diferentes níveis:
 
 ### 📊 Diagrama da Arquitetura
 
-![Diagrama da Arquitetura](./Captura%20de%20tela%202025-05-27%20172548.png)
-
----
-
-### 📁 Estrutura de Diretórios (Exemplo Simplificado)
-
+![Diagrama da Arquitetura](../imagens/diagrama-arquitetura.png)
