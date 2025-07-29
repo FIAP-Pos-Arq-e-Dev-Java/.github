@@ -60,11 +60,29 @@ A qualidade do software é garantida por testes em diferentes níveis:
 
 ### Execução
 
-- Baixar scripts, clonar projetos e buildar containers:
-  
+- Baixar [script](https://raw.githubusercontent.com/FIAP-Pos-Arq-e-Dev-Java/.github/refs/heads/main/setup.sh) ou salvar em setup.sh
+
+Script content:
 ```
-git clone git@github.com:FIAP-Pos-Arq-e-Dev-Java/.github.git WeFood
-cd WeFood
+#!/bin/bash
+
+# Repository URLs
+REPO_LOGIN="https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-login"
+REPO_RESTAURANTE="https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-restaurante"
+
+if [ ! -d "ms-login" ]; then
+    git clone "$REPO_LOGIN"
+fi
+
+if [ ! -d "ms-restaurante" ]; then
+    git clone "$REPO_RESTAURANTE"
+fi
+
+docker compose up -d
+```
+
+- Executar script:
+```
 chmod +x setup.sh
 ./setup.sh
-```  
+```
