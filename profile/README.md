@@ -1,6 +1,7 @@
 # Tech Challenge da instituição FIAP para o curso pós graduação em Arquitetura e Desenvolvimento Java
 
 ### Link da documentação do Tech Challenge 1 - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing
+### Link da documentação do Tech Challenge 2 - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing
 
 ## Arquitetura de Microsserviços - Gerenciamento de Usuários e Logins
 
@@ -16,11 +17,11 @@ A aplicação está dividida em dois microsserviços independentes:
 
 #### 🧩 Microsserviços
 
-#### 🔹 ms-usuario
-Responsável pelas operações de **cadastro**, **atualização**, **exclusão** e **consulta** de clientes e restaurantes.
-
 #### 🔹 ms-login
-Responsável pela **autenticação de usuários**, bem como pelas operações de **exclusão de login**, **consulta de status da conta** e **atualização de senha**. Atua como o ponto central de **segurança** e **controle de acesso** da aplicação.
+Responsável pelas operações de **cadastro**, **atualização**, **exclusão**, **consulta** e **autenticação** de usuários.
+
+#### 🔹 ms-restaurante
+Responsável pelas operações de **cadastro**, **atualização**, **exclusão**, **consulta** e **autenticação** de restaurantes, tipos de cozinha e itens do cardápio.
 
 Ambos os microsserviços foram implementados com a linguagem **Java 17**, utilizando o framework **Spring Boot** para desenvolvimento, injeção de dependência e exposição de endpoints REST.
 
@@ -29,17 +30,16 @@ Ambos os microsserviços foram implementados com a linguagem **Java 17**, utiliz
 ### ⚙️ Tecnologias Utilizadas
 
 - **Linguagem e Frameworks**: Java 17, Spring Boot, Spring Data JPA
-- **Gerenciamento de Dependências**: Maven
+- **Gerenciamento de Dependências**: Maven e Gradle
 - **Banco de Dados**: 
-  - MySQL 8.3 (executado em containers Docker)  
+  - MySQL 8.3 (executado em containers Docker)
+  - Postgres 
   - H2 (utilizado exclusivamente para testes locais)
 - **Documentação e Contratos de API**: OpenAPI/Swagger com geração automática de código (API First)
 - **Mapeamento de Objetos**: MapStruct (conversão entre entidades, domínios e DTOs)
 - **Redução de Código Boilerplate**: Projeto Lombok
-- **Controle de Versão**: GitHub
-- **Conteinerização**:
-  - Docker (Dockerfiles para empacotamento dos microsserviços)
-  - Docker Compose (para orquestração dos containers, incluindo banco de dados)
+- **Controle de Versão**: Git
+- **Conteinerização**: Docker
 
 ---
 
@@ -55,3 +55,16 @@ A qualidade do software é garantida por testes em diferentes níveis:
 ### 📊 Diagrama da Arquitetura
 
 ![Diagrama da Arquitetura](../imagens/diagrama-arquitetura.png)
+
+---
+
+### Execução
+
+- Baixar scripts, clonar projetos e buildar containers:
+  
+```
+git clone git@github.com:FIAP-Pos-Arq-e-Dev-Java/.github.git WeFood
+cd WeFood
+chmod +x setup.sh
+./setup.sh
+```  
