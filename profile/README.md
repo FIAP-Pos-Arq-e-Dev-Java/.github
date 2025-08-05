@@ -29,7 +29,7 @@ Ambos os microsserviços foram implementados com a linguagem **Java 17**, utiliz
 
 ### ⚙️ Tecnologias Utilizadas
 
-- **Linguagem e Frameworks**: Java 17, Spring Boot, Spring Data JPA  
+- **Linguagem e Frameworks**: Java 21, Spring Boot, Spring Data JPA  
 - **Gerenciamento de Dependências**: Maven e Gradle  
 - **Banco de Dados**:  
   - MySQL 8.3 (Docker)  
