@@ -12,7 +12,7 @@ if [ ! -d "ms-restaurante" ]; then
     git clone "$REPO_RESTAURANTE"
 fi
 
-GIST_RAW_URL="https://gist.githubusercontent.com/dpcamargo/ac8e8cc28ae0d5f9b3a7e42787e2db1d/raw/docker-compose.yaml"
+GIST_RAW_URL="https://gist.githubusercontent.com/Ghustavo516/887bd750beb6a79caecf314a503e5ab3/raw/050670da36d1baa591e6e7fe099fb3af1e6cb26c/docker-compose.yaml"
 curl -fsSL "$GIST_RAW_URL" -o docker-compose.yaml
 
 docker compose up -d
