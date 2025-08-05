@@ -58,26 +58,73 @@ Ambos os microsserviços foram implementados com a linguagem **Java 21**, utiliz
 
 ## 🐳 Execução do Projeto com Docker Compose
 
-Este projeto utiliza Docker Compose para orquestrar dois microsserviços:
+## ✅ Pré-requisitos
 
-- `ms-login` (Spring Boot + PostgreSQL)  
-- `ms-restaurante` (Spring Boot + MySQL)
+Antes de executar os scripts, instale os seguintes softwares:
 
----
-
-### ✅ Pré-requisitos
-
-- [Docker](https://www.docker.com/products/docker-desktop)  
-- [Docker Compose](https://docs.docker.com/compose/)  
-- [Postman](https://www.postman.com/downloads/) – para testar as APIs  
-- (Opcional) [DBeaver](https://dbeaver.io/download/) – para conectar e visualizar os bancos de dados  
+| Requisito   | Descrição                                                                 |
+|-------------|---------------------------------------------------------------------------|
+| [Docker](https://www.docker.com/)       | Necessário para rodar os containers dos bancos de dados.           |
+| [Java JRE 21+](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html) | Recomendado pelo menos JRE 21 para execução dos projetos.          |
+| [Postman](https://www.postman.com/downloads/)     | Para testar as collections de API.                                 |
+| [DBeaver](https://dbeaver.io/download/) | Opcional, para visualizar os bancos de dados de forma gráfica.     |
+| Git         | Para clonar os repositórios automaticamente.               |
 
 ---
 
-### 🚀 Como executar
+## 💻 Como usar
 
-1. Clone este repositório e entre na raiz do projeto.
-2. Execute o comando:
+### 🐧 Linux ou macOS
 
-```bash
-docker-compose up --build
+1. Abra o terminal
+2. Dê permissão de execução ao script:
+   ```bash
+   chmod +x setup.sh
+   ```
+3. Execute o script:
+   ```bash
+   ./setup.sh
+   ```
+
+---
+
+### 🪟 Windows
+
+1. Dê duplo clique no arquivo `setup.bat`  
+   Ou abra o terminal no diretório e execute:
+   ```cmd
+   setup.bat
+   ```
+
+---
+
+## 🛠️ O que o script faz?
+
+- Clona os repositórios:
+  - `https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-login`
+  - `https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-restaurante`
+- Cria um arquivo `docker-compose.yml` com dois bancos (MySQL e PostgreSQL)
+- Cria volumes dedicados para persistência de dados
+- Inicia os containers com `docker compose up -d`
+
+---
+
+## 🔍 Observações
+
+- Os containers de banco sobem automaticamente, mas os microsserviços precisam ser iniciados via IDE ou terminal (caso queira rodá-los manualmente).
+- Você pode usar o Postman para testar endpoints com as collections fornecidas nos projetos.
+
+---
+
+## 📁 Estrutura esperada após execução
+
+```
+/seu-diretorio/
+│
+├── data/
+├── ms-login/
+├── ms-restaurante/
+├── docker-compose.yml
+├── setup.sh
+└── setup.bat
+```
