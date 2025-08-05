@@ -1,6 +1,7 @@
-# Tech Challenge da instituição FIAP para o curso pós graduação em Arquitetura e Desenvolvimento Java
+# Tech Challenge da instituição FIAP para o curso pós-graduação em Arquitetura e Desenvolvimento Java
 
-### Link da documentação do Tech Challenge - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing](https://docs.google.com/document/d/1-tYWdBCnAFoLgNF_DnMFL9FFcWXoOvRZiMLU4fICVM4/edit?usp=sharing](https://docs.google.com/document/d/1-tYWdBCnAFoLgNF_DnMFL9FFcWXoOvRZiMLU4fICVM4
+### 📄 [Documentação Oficial do Desafio](https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing)
+### 🎥 Vídeo - [URL](https://exemplo.com) 
 
 ## Arquitetura de Microsserviços - Gerenciamento de Usuários e Logins
 
@@ -14,7 +15,7 @@ Este projeto foi desenvolvido com base em três pilares arquiteturais:
 
 A aplicação está dividida em dois microsserviços independentes:
 
-#### 🧩 Microsserviços
+### 🧩 Microsserviços
 
 #### 🔹 ms-login
 Responsável pelas operações de **cadastro**, **atualização**, **exclusão**, **consulta** e **autenticação** de usuários.
@@ -28,26 +29,24 @@ Ambos os microsserviços foram implementados com a linguagem **Java 17**, utiliz
 
 ### ⚙️ Tecnologias Utilizadas
 
-- **Linguagem e Frameworks**: Java 17, Spring Boot, Spring Data JPA
-- **Gerenciamento de Dependências**: Maven e Gradle
-- **Banco de Dados**: 
-  - MySQL 8.3 (executado em containers Docker)
-  - Postgres 
-  - H2 (utilizado exclusivamente para testes locais)
-- **Documentação e Contratos de API**: OpenAPI/Swagger com geração automática de código (API First)
-- **Mapeamento de Objetos**: MapStruct (conversão entre entidades, domínios e DTOs)
-- **Redução de Código Boilerplate**: Projeto Lombok
-- **Controle de Versão**: Git
-- **Conteinerização**: Docker
+- **Linguagem e Frameworks**: Java 17, Spring Boot, Spring Data JPA  
+- **Gerenciamento de Dependências**: Maven e Gradle  
+- **Banco de Dados**:  
+  - MySQL 8.3 (Docker)  
+  - PostgreSQL (Docker)  
+  - H2 (para testes locais)  
+- **Documentação de API**: OpenAPI/Swagger (API First)  
+- **MapStruct**: Mapeamento entre entidades e DTOs  
+- **Lombok**: Redução de boilerplate  
+- **Git**: Controle de versão  
+- **Docker**: Conteinerização  
 
 ---
 
 ### 🧪 Estratégia de Testes
 
-A qualidade do software é garantida por testes em diferentes níveis:
-
-- **Testes Unitários**: com JUnit 5 e Mockito para validar unidades isoladas de código.
-- **Testes de API**: testes manuais realizados via coleções do Postman, assegurando a conformidade com os contratos definidos via OpenAPI.
+- **Testes Unitários**: JUnit 5 e Mockito  
+- **Testes de API**: via Postman (coleções manuais ou automatizadas)
 
 ---
 
@@ -57,37 +56,28 @@ A qualidade do software é garantida por testes em diferentes níveis:
 
 ---
 
-### Execução
-
-- Baixar o arquivo `docker-compose.yml` do projeto https://github.com/FIAP-Pos-Arq-e-Dev-Java/docker
-- Necessário ter instalado o docker 
-
-# 🐳 Execução do Projeto com Docker Compose
+## 🐳 Execução do Projeto com Docker Compose
 
 Este projeto utiliza Docker Compose para orquestrar dois microsserviços:
 
-- `ms-login` (Spring Boot + PostgreSQL)
+- `ms-login` (Spring Boot + PostgreSQL)  
 - `ms-restaurante` (Spring Boot + MySQL)
 
 ---
 
-## ✅ Pré-requisitos
+### ✅ Pré-requisitos
 
-Certifique-se de ter os seguintes softwares instalados:
-
-- [Docker](https://www.docker.com/products/docker-desktop)
-- [Docker Compose](https://docs.docker.com/compose/)
-- [Postman](https://www.postman.com/downloads/) – para testar as APIs
-- (Opcional) [DBeaver](https://dbeaver.io/download/) – para conectar e visualizar os bancos de dados
+- [Docker](https://www.docker.com/products/docker-desktop)  
+- [Docker Compose](https://docs.docker.com/compose/)  
+- [Postman](https://www.postman.com/downloads/) – para testar as APIs  
+- (Opcional) [DBeaver](https://dbeaver.io/download/) – para conectar e visualizar os bancos de dados  
 
 ---
 
-## 🚀 Como executar
+### 🚀 Como executar
 
-1. Abra o terminal na pasta do projeto (onde está o arquivo `docker-compose.yml`)
-
-2. Execute o comando abaixo para buildar e subir os containers:
+1. Clone este repositório e entre na raiz do projeto.
+2. Execute o comando:
 
 ```bash
 docker-compose up --build
-
