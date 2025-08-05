@@ -59,32 +59,35 @@ A qualidade do software é garantida por testes em diferentes níveis:
 
 ### Execução
 
-- Baixar [script]([https://raw.githubusercontent.com/FIAP-Pos-Arq-e-Dev-Java/.github/refs/heads/main/setup.sh](https://gist.githubusercontent.com/Ghustavo516/278359a21776b804cd8807903063e30d/raw/c5e9321f1c672c90e2def0da403205fe00aad027/setup.sh)) ou salvar em setup.sh
+- Baixar o arquivo `docker-compose.yml` do projeto https://github.com/FIAP-Pos-Arq-e-Dev-Java/docker
+- Necessário ter instalado o docker 
 
-Script content:
-```
-#!/bin/bash
+# 🐳 Execução do Projeto com Docker Compose
 
-# Repository URLs
-REPO_LOGIN="https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-login"
-REPO_RESTAURANTE="https://github.com/FIAP-Pos-Arq-e-Dev-Java/ms-restaurante"
+Este projeto utiliza Docker Compose para orquestrar dois microsserviços:
 
-if [ ! -d "ms-login" ]; then
-    git clone "$REPO_LOGIN"
-fi
+- `ms-login` (Spring Boot + PostgreSQL)
+- `ms-restaurante` (Spring Boot + MySQL)
 
-if [ ! -d "ms-restaurante" ]; then
-    git clone "$REPO_RESTAURANTE"
-fi
+---
 
-GIST_RAW_URL="https://gist.githubusercontent.com/Ghustavo516/887bd750beb6a79caecf314a503e5ab3/raw/050670da36d1baa591e6e7fe099fb3af1e6cb26c/docker-compose.yaml"
-curl -fsSL "$GIST_RAW_URL" -o docker-compose.yaml
+## ✅ Pré-requisitos
 
-docker compose up -d
-```
+Certifique-se de ter os seguintes softwares instalados:
 
-- Executar script:
-```
-chmod +x setup.sh
-./setup.sh
-```
+- [Docker](https://www.docker.com/products/docker-desktop)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [Postman](https://www.postman.com/downloads/) – para testar as APIs
+- (Opcional) [DBeaver](https://dbeaver.io/download/) – para conectar e visualizar os bancos de dados
+
+---
+
+## 🚀 Como executar
+
+1. Abra o terminal na pasta do projeto (onde está o arquivo `docker-compose.yml`)
+
+2. Execute o comando abaixo para buildar e subir os containers:
+
+```bash
+docker-compose up --build
+
