@@ -10,7 +10,7 @@
 Este projeto foi desenvolvido com base em três pilares arquiteturais:
 
 - **Microsserviços**
-- **Arquitetura Hexagonal (Ports and Adapters)**
+- **Arquitetura Clean Arch**
 - **API First**
 
 A aplicação está dividida em dois microsserviços independentes:
@@ -23,7 +23,7 @@ Responsável pelas operações de **cadastro**, **atualização**, **exclusão**
 #### 🔹 ms-restaurante
 Responsável pelas operações de **cadastro**, **atualização**, **exclusão**, **consulta** e **autenticação** de restaurantes, tipos de cozinha e itens do cardápio.
 
-Ambos os microsserviços foram implementados com a linguagem **Java 17**, utilizando o framework **Spring Boot** para desenvolvimento, injeção de dependência e exposição de endpoints REST.
+Ambos os microsserviços foram implementados com a linguagem **Java 21**, utilizando o framework **Spring Boot** para desenvolvimento, injeção de dependência e exposição de endpoints REST.
 
 ---
 
