@@ -60,7 +60,7 @@ A qualidade do software é garantida por testes em diferentes níveis:
 
 ### Execução
 
-- Baixar [script](https://raw.githubusercontent.com/FIAP-Pos-Arq-e-Dev-Java/.github/refs/heads/main/setup.sh) ou salvar em setup.sh
+- Baixar [script]([https://raw.githubusercontent.com/FIAP-Pos-Arq-e-Dev-Java/.github/refs/heads/main/setup.sh](https://gist.githubusercontent.com/Ghustavo516/278359a21776b804cd8807903063e30d/raw/c5e9321f1c672c90e2def0da403205fe00aad027/setup.sh)) ou salvar em setup.sh
 
 Script content:
 ```
@@ -78,7 +78,7 @@ if [ ! -d "ms-restaurante" ]; then
     git clone "$REPO_RESTAURANTE"
 fi
 
-GIST_RAW_URL="https://gist.githubusercontent.com/dpcamargo/ac8e8cc28ae0d5f9b3a7e42787e2db1d/raw/docker-compose.yaml"
+GIST_RAW_URL="https://gist.githubusercontent.com/Ghustavo516/887bd750beb6a79caecf314a503e5ab3/raw/050670da36d1baa591e6e7fe099fb3af1e6cb26c/docker-compose.yaml"
 curl -fsSL "$GIST_RAW_URL" -o docker-compose.yaml
 
 docker compose up -d
