@@ -1,7 +1,6 @@
 # Tech Challenge da instituição FIAP para o curso pós graduação em Arquitetura e Desenvolvimento Java
 
-### Link da documentação do Tech Challenge 1 - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing
-### Link da documentação do Tech Challenge 2 - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing
+### Link da documentação do Tech Challenge - https://docs.google.com/document/d/1NRsfSBYdT85sUO102jfotT-vGljYR9anmU2RUm7VltM/edit?usp=sharing](https://docs.google.com/document/d/1-tYWdBCnAFoLgNF_DnMFL9FFcWXoOvRZiMLU4fICVM4/edit?usp=sharing](https://docs.google.com/document/d/1-tYWdBCnAFoLgNF_DnMFL9FFcWXoOvRZiMLU4fICVM4
 
 ## Arquitetura de Microsserviços - Gerenciamento de Usuários e Logins
 
